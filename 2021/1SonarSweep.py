@@ -6,7 +6,8 @@ for i in range(1, len(report)):
 print(increases)
 
 increases = 0
-for i in range(5, len(report) - len(report) % 3):
-  if report[i - 5] + report[i - 4] + report[i - 3] < report[i - 2] + report[i - 1] + report[i]:
+# report = [199, 200, 208, 210, 200, 207, 240, 269, 260, 263]
+for i in range(3, len(report)):
+  if report[i] > report[i - 3]:
     increases += 1
 print(increases)
